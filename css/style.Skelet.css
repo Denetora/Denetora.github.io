@@ -1,0 +1,379 @@
+body {
+	margin: 0;
+    font-family:'Courier', sans-serif; 
+ 	background-color: #000;
+
+  	font-size: 15px;
+   	line-height: 1.6;
+  	color: #333;
+   }
+
+   *,
+   *:before,
+   *:after {
+    box-sizing: border-box;
+	}
+	h1, h2, h3, h4, h5, h5, h6 {
+		margin: 0;
+	}
+
+	
+	:root {
+		--index: calc(1vw + 1vh);
+	}
+
+	img {
+		overflow-clip-margin: content-box;
+		overflow: clip;
+	}
+	
+	div {
+		display: block;
+	}
+
+/*Container*/
+   .container {
+   		width: 100%;
+   		margin:  auto;
+		padding: 25px;
+		height: 615px;
+   	}
+
+/*Header*/
+	.header {
+		width: 100%;
+		padding-top: 10px;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		background-color: #221D19;
+	}
+
+	.header__inner {
+		width: 1000px;
+		height: 55px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: rgb(34,29,25);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__logo {
+		font-size: 50px;
+		font-weight: 700;
+		color: #BAA681;
+		margin: 80px;
+	}
+	.header__logo a:link {
+		color: #BAA681;
+		text-decoration: none;
+		font-size: 50px;
+	}
+
+	.header-line{
+		width: 100%;
+		height: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #938369;
+		display: flex;
+		justify-content: space-between;
+	}
+
+/*Nav*/
+	.nav {
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	.nav__link {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 15px;
+		position: relative;
+		font-size: 17px;
+		color: #BAA681	;
+		text-decoration: none;
+		transition: color 0.2s linear;
+		margin-right: 30px;
+	}
+
+	.nav__link:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+
+		background-color: #BAA681;
+		opacity: 0;
+		position: absolute; 
+		top: 100%;
+		left: 0;
+		z-index: 1;
+		transition: opacity 0.2s linear;
+	}
+	
+	.nav__link:hover {
+		color: #BAA681;
+	}
+	
+	.nav__link:hover:after,
+	.nav__link.active:after {
+		opacity: 1;
+	}
+
+	.nav__link.active{
+		color: #BAA681;
+	}
+
+/*Main-content boneviewer-content*/
+	.main-content{
+		width: 1000px;
+    	margin-left: auto;
+   		margin-right: auto;
+   	 	/*background-color: rgb(34,29,23);*/
+	}
+	.main-content boneviewer-content{
+		background-color: rgb(0,0,0);
+    	padding: 0 1em 2em;
+	}
+
+/*Selectview*/
+	.selectview{
+		/*width: 200px;*/
+		/*display: block;*/
+		/*margin: calc(var(--index) * 5);*/
+		/*float: left;*/
+		float: left;
+		color: rgb(186,166,129);
+		font-size: 1.2em;
+		text-align: center;
+		min-height: 585px;
+		margin-right: 100px;
+		margin-left: -40px;
+		margin: 10px;
+	
+	}
+
+/*Sub__title*/
+	.sub__title{
+		font-size: calc(var(--index) * 1.0);
+		margin-top: 15px;
+		margin-bottom: 10px;
+		text-decoration: none;
+		font-weight: bold;
+		float: none;
+		
+		font-family: 'Courier New', Courier, monospace;
+		text-transform: uppercase;
+		color: #BAA681;
+
+		text-align: center;
+	}
+
+/*Regionthumbs*/
+	.regionthumbs{
+		margin-left: auto;
+    	margin-right: auto;
+    	height: 530px;
+	}
+
+/*Thumb*/
+	.tumb{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline;
+		cursor: pointer;
+		
+		text-align: center;
+	}
+	.thumb__text{
+    	font-family: "Arial", Helvetica, sans-serif;
+   	 	font-size: 14px;
+		text-decoration: none;
+    	color: #BAA681;
+	}
+	.thumb__text a:link {
+		color: #BAA681;
+		text-decoration: none;
+		font-size: 14px;
+	}
+	
+	.thumb__text:hover {
+		opacity: 0.5;
+	}
+	
+	.thumb__text:hover:after,
+	.thumb__text.active:after {
+		opacity:0.5;
+	}
+
+	.thumb__text.active{
+		opacity: 1;
+	}
+
+	.thumb__box__img img{
+		width: 70px;
+		height: 70px;
+		opacity: 0.5;
+	}
+
+	.thumb__box__img:hover {
+		opacity: 0.5;
+	}
+	
+	.thumb__box__img:hover:after,
+	.thumb__box__img.active:after {
+		opacity:0.5;
+	}
+
+	.thumb__box__img.active{
+		opacity: 1;
+	}
+
+
+/*Line*/
+	.vertical__line{
+		margin-top: 60px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-left: solid thin rgb(46,46,46);
+		height: 560px;
+		float: left;
+	}
+
+	/*.line{
+		width: 100%;
+		height: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #938369;
+		display: flex;
+		justify-content: space-between;
+		}
+
+/*Selectbone*/
+	.selectbone{
+	font-family: sans-serif;
+    float: left;
+    color: rgb(186,166,129);
+    font-size: 1.2em;
+    text-align: center;
+    width: 250px;
+	}
+	
+	.regionlist{
+	font-family: "Arial", Helvetica, sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+    margin-left: 0px;
+    color: rgb(217,208,191);
+    text-decoration: none;
+	}
+
+	.regionlist a:link {
+		color: rgb(186,166,129);
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.regionlist a:hover {
+		opacity: 0.7;
+	}
+	
+/*Img*/
+	.large_display{
+		position: absolute;
+		z-index: 1;
+		left: auto;
+		margin-top: 60px;
+		margin-left: 125px;
+	}
+
+	.large_overlay{
+		position: absolute;
+		z-index: 2;
+		left: auto;
+		margin-top: 60px;
+		margin-left: 125px;
+	}
+
+/*Selectoverlay*/
+	.selectoverlay{
+		position: relative;
+ 	   display: block;
+ 	   width: 530px;
+	}
+
+
+	.footcredits{
+		clear: both;
+  	 	display: block;
+  	 	margin: 90px 0 0 0;
+  	 	background-color: rgb(34,29,23);
+  	 	color: rgb(217,206,186);
+  		padding-top: 10px;
+  		border-top: solid 5px rgb(218,210,187);
+	}
+
+	.footcenter{
+		width: 920px;
+		height: 200px;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.footer_col_spacer{
+		display: inline;
+		float: left;
+		width: 10%;
+	}
+
+	.footer_col_1{
+		float: left;
+    	display: inline;
+    	width: 20%;
+	}
+
+	.footer_col_2 {
+		display: inline;
+		float: left;
+		width: 40%;
+	}
+	.footer_col_3{
+		float: left;
+    	display: inline;
+    	width: 30%;
+		text-decoration: none;
+	}
+
+	.text_info{
+		font-size: 14px;
+		margin-bottom: 10px;
+		text-align: left;
+		margin-right: 20px;
+	}
+	.text_title{
+		font-size: 17px;
+    	margin-bottom: 8px;
+	}
+	.credit_text{
+		font-size: 0.875em;
+		margin-bottom: 10px;
+		text-align: left;
+		max-height: 200px;
+		display: block;
+		float: right;
+	}
+	.credit_text_link {
+		font-size: 15px;
+   		margin-bottom: 10px;
+	}
+
+	.credit_text_link a:link {
+		text-decoration: none;
+	}
